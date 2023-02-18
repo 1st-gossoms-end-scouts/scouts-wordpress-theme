@@ -14,7 +14,7 @@
       <i class="bi bi-bookmark"></i> 
       <span class="text-uppercase"><?php the_category(', '); ?></span>
     </div>
-    <h2 class="h1 mb-3 fw-bolder">
+    <h2 class="h1 mb-3">
       <a href="<?php the_permalink(); ?>">
         <?php the_title()?>
       </a>
@@ -25,16 +25,16 @@
     <?php if ( has_excerpt( $post->ID ) ) {
     the_excerpt();
     ?><a href="<?php the_permalink(); ?>">
-    	<?php _e( 'Continue reading →', 'b5st' ) ?>
+    	<?php _e( 'Continue reading →', 'scouts-wordpress-theme' ) ?>
       </a>
   	<?php } else {
-  	  the_content( __('Continue reading →', 'b5st' ) );
+  	  the_content( __('Continue reading →', 'scouts-wordpress-theme' ) );
 	  } ?>
 
     <div class="text-muted mb-3">
       <i class="bi bi-calendar3"></i> <?php b5st_post_date(); ?>
-      <i class="bi bi-person-circle"></i> <?php _e('By ', 'b5st'); the_author_posts_link(); ?>
-      <i class="bi bi-chat-text"></i> <a href="<?php comments_link(); ?>"><?php printf( _nx( 'One Comment', '%1$s Comments', get_comments_number(), '', 'b5st' ), number_format_i18n( get_comments_number() ) ); ?></a>
+      <i class="bi bi-person-circle"></i> <?php _e('By ', 'scouts-wordpress-theme'); the_author_posts_link(); ?>
+      <i class="bi bi-chat-text"></i> <a href="<?php comments_link(); ?>"><?php printf( _nx( 'One Comment', '%1$s Comments', get_comments_number(), '', 'scouts-wordpress-theme' ), number_format_i18n( get_comments_number() ) ); ?></a>
     </div>
   </section>
 

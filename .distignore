@@ -1,0 +1,12 @@
+/.git
+/.github
+/node_modules
+/webpack.config.js
+/theme/scss
+/theme/jsx
+/bootstrap
+/plugins/block-editor-colors/.gitignore
+
+.distignore
+.gitignore
+.gitmodules

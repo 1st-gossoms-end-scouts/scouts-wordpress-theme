@@ -1,14 +1,18 @@
 // Layout wrappers (centered width constraints)
 
+.col-md {
+
+}
+
 // .wrap-sm {} // unused
+
 
 .wrap-md {
   width: 100%;
-  max-width: 720px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: .75rem;
-  padding-left: .75rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
 }
 
 .wrap-lg {

@@ -7,14 +7,14 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>> <?php wp_body_open();?>
 
 <a class="visually-hidden-focusable d-inline-block p-1" href="#site-main">Skip to main content</a>
 
 <?php b5st_navbar_before();?>
 
-<nav id="site-navbar" class="border-bottom navbar navbar-expand-md navbar-light bg-light">
-  <div class="container-xxl">
+<nav id="site-navbar" class="navbar navbar-expand-md navbar-light bg-primary">
+  <div class="container">
 
     <?php b5st_navbar_brand();?>
 

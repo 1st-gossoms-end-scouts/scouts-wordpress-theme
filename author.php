@@ -21,7 +21,7 @@ if (
 
   <header class="container py-5 text-center">
     <?php if ($isAuthor === true): ?>
-      <span class="h3 mt-5 fw-light"><?php _e('Posts by:', 'b5st'); ?></span>
+      <span class="h3 mt-5 fw-light"><?php _e('Posts by:', 'scouts-wordpress-theme'); ?></span>
       <h1 class="display-4 mt-3">
       <?php echo get_the_author_meta( 'display_name' ); ?>
       </h1>

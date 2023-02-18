@@ -1,0 +1,35 @@
+name: Build release zip
+
+on:
+  push:
+#    # Pattern matched against refs/tags
+#    tags:
+#      - '**'           # Push events to every tag including hierarchical tags like v1.0/beta
+
+jobs:
+  build:
+    name: Build release zip
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build plugin # Remove or modify this step as needed
+        run: |
+          composer install --no-dev
+          npm install
+          npm run build
+          npm run scss-build
+
+      - name: Generate zip
+        uses: 10up/action-wordpress-plugin-build-zip@stable
+        env:
+          SLUG: scouts-wordpress-theme
+#      - name: FTP Deploy to WP Engine (Production)
+#        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+#        with:
+#          server: 1stgossomsendscouts.org.uk
+#          username: github@1stgossomsendscouts.org.uk
+#          password: ${{ secrets.FTP_PASSWORD }}
+#          local-dir: ./
+#          server-dir: wp.1stgossomsendscouts.org.uk/public_html/wp-content/themes/scout-wordpress-theme

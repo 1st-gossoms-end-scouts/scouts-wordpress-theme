@@ -1,14 +1,17 @@
 /** !
-Theme Name: b5st
-Theme URI: https://github.com/SimonPadbury/b5st
-Description: A simple starter theme for WordPress. Gutenberg compatible. Using Bootstrap 5.x, Bootstrap Icons.x, and node-sass.
-Author: Simon Padbury
-Author URI: http://simonpadbury.github.io
-Version: 1.3.1
-Tags:
-Text Domain: b5st
-License: Unlicense
-License URI: http://unlicense.org
+Theme Name: Scouts Wordpress Theme
+Theme URI: https://wordpress-theme-demo.1stgossomsendscouts.org.uk/
+Description: A Wordpress template for scout organisations, compliant with the UK Scout Assocation brand guidelines. Gutenberg compatible. Using Bootstrap 5.x, Bootstrap Icons.x, and node-sass.
+Author: Harvey Allsop
+Author URI:
+Version: 0.0.1
+Tags: scouts, bootstrap
+Text Domain: scouts-wordpress-theme
+License: MIT License
+License URI: http://opensource.org/licenses/MIT
+Base Theme: b5st
+Requires PHP: true
+Tested up to: 6.2
 */
 
 /* The CSS is all in theme/css/b5st.css  */

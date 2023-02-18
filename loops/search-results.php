@@ -6,7 +6,7 @@
 
 <header class="wrap-lg py-5 text-center">
   <h1 class="display-2 my-5">
-    <?php _e('Search Results for', 'b5st'); ?> &ldquo;<?php the_search_query(); ?>&rdquo;
+    <?php _e('Search Results for', 'scouts-wordpress-theme'); ?> &ldquo;<?php the_search_query(); ?>&rdquo;
   </h1>
 </header>
 
@@ -22,7 +22,7 @@
 <?php endwhile; else: ?>
   <div class="wrap-md pb-5 entry-content">
     <article class="alert alert-warning px-3">
-      <i class="bi bi-exclamation-triangle"></i> <?php _e('Sorry, your search yielded no results.', 'b5st'); ?>
+      <i class="bi bi-exclamation-triangle"></i> <?php _e('Sorry, your search yielded no results.', 'scouts-wordpress-theme'); ?>
     </article>
   </div>
 <?php endif; ?>

@@ -70,3 +70,42 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 ol.wp-block-latest-comments {
   padding-left: 0;
 }
+
+// Forms
+//.input-group {
+//  //margin-bottom: $form-label-margin-bottom;
+//  //margin-top: $form-text-margin-top;
+//  padding: $input-padding-y $input-padding-x $input-padding-y $input-padding-x;
+//}
+
+input {
+  padding: $input-padding-y $input-padding-x $input-padding-y $input-padding-x;
+  line-height: $input-line-height;
+  transition: $input-transition;
+  border-radius: $input-border-radius;
+  height: $input-height;
+}
+
+.editor-styles-wrapper .wp-element-button, .wp-element-button, button {
+  @extend .btn;
+}
+
+
+input.components-combobox-control__input[type=text] {
+  //for gutenburg
+  height: auto;
+}
+
+.wp-block-search__inside-wrapper {
+  margin-bottom: 1em;
+}
+
+.wp-block-group .is-vertical, .wp-block-buttons{
+  margin-top: $block-margin-top;
+  margin-bottom: $block-margin-bottom;
+}
+
+.navbar-nav {
+  padding-right: 10px;
+  padding-left: 10px;
+}

@@ -11,15 +11,14 @@
         <i class="bi bi-bookmark"></i> 
         <span class="text-uppercase"><?php the_category(', '); ?></span>
       </div>
-      <h1 class="display-1 text-center fw-bolder"><?php the_title()?></h1>
+      <h1 class="display-1 text-center"><?php the_title()?></h1>
       <div class="header-metas d-flex justify-content-center align-items-center my-5 text-muted">
-        
         <div class="pe-3 d-flex align-items-center">
           <?php # <i class="bi bi-person-circle"></i> ?>
           <div class="me-1 border rounded-circle overflow-hidden">
             <?php b5st_author_avatar(); ?>
           </div>
-          <?php _e('By', 'b5st'); echo '&nbsp;'; the_author_posts_link(); ?>
+          <?php _e('By', 'scouts-wordpress-theme'); echo '&nbsp;'; the_author_posts_link(); ?>
         </div>
 
         <div class="pe-3">
@@ -33,14 +32,14 @@
             $comment_count = get_comments_number();
             printf(
               /* translators: 1: comment count number. */
-              esc_html( _nx( '%1$s comment', '%1$s comments', $comment_count, 'b5st' ) ),
+              esc_html( _nx( '%1$s comment', '%1$s comments', $comment_count, 'scouts-wordpress-theme' , 'scouts-wordpress-theme') ),
               number_format_i18n( $comment_count )
             );
           ?></a>
         </div>
       </div>
     </header>
-    <section class="container-xxl pb-6">
+    <section class="container pb-6">
       <?php the_post_thumbnail(); ?>
     </section>
 
@@ -65,13 +64,13 @@
       <?php b5st_author_bio_avatar(); ?>
     </div>
     <div class="ms-3">
-      <p class="h4 author-name"><?php _e('Author: ', 'b5st'); the_author(); ?></p>
+      <p class="h4 author-name"><?php _e('Author: ', 'scouts-wordpress-theme'); the_author(); ?></p>
       <?php if (b5st_author_description()) {
         ?>
         <div class="author-description"><?php b5st_author_description(); ?></div>
         <?php
       } ?>
-      <p class="author-other-posts mb-0"><?php _e('Other posts by ', 'b5st'); the_author_posts_link(); ?></p>
+      <p class="author-other-posts mb-0"><?php _e('Other posts by ', 'scouts-wordpress-theme'); the_author_posts_link(); ?></p>
     </div>
   </section><!-- /.author-bio -->
 
@@ -85,7 +84,7 @@
     endif;
   ?>
 
-  <section class="container-xxl my-5">
+  <section class="container my-5">
     <div class="row g-2">
       <?php if (strlen(get_previous_post()->post_title) > 0) { ?>
       <div class="col-sm">

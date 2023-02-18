@@ -7,7 +7,6 @@ if ( ! function_exists('b5st_setup') ) {
 	function b5st_setup() {
 
 		add_theme_support( 'editor-styles' );
-		add_editor_style('theme/css/editor.css');
 
 		// Gutenberg Blocks
 		add_theme_support( 'wp-block-styles' );
@@ -20,26 +19,26 @@ if ( ! function_exists('b5st_setup') ) {
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => __( 'Small', 'b5st' ),
-					'shortName' => __( 'S', 'b5st' ),
+					'name'      => __( 'Small', 'scouts-wordpress-theme' ),
+					'shortName' => __( 'S', 'scouts-wordpress-theme' ),
 					'size'      => 14,
 					'slug'      => 'small',
 				),
 				array(
-					'name'      => __( 'Normal', 'b5st' ),
-					'shortName' => __( 'M', 'b5st' ),
+					'name'      => __( 'Normal', 'scouts-wordpress-theme' ),
+					'shortName' => __( 'M', 'scouts-wordpress-theme' ),
 					'size'      => 16,
 					'slug'      => 'normal',
 				),
 				array(
-					'name'      => __( 'Large', 'b5st' ),
-					'shortName' => __( 'L', 'b5st' ),
+					'name'      => __( 'Large', 'scouts-wordpress-theme' ),
+					'shortName' => __( 'L', 'scouts-wordpress-theme' ),
 					'size'      => 22,
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => __( 'Huge', 'b5st' ),
-					'shortName' => __( 'XL', 'b5st' ),
+					'name'      => __( 'Huge', 'scouts-wordpress-theme' ),
+					'shortName' => __( 'XL', 'scouts-wordpress-theme' ),
 					'size'      => 28,
 					'slug'      => 'huge',
 				),

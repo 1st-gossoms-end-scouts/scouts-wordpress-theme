@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "styles": {
+    "elements": {
+      "button": {
+        "color": {
+          "text": "var(--bec-color-scout-text-secondary)",
+          "background": "var(--bec-color-scout-secondary)"
+        },
+        "border": {
+          "color": "var(--bec-color-scout-secondary)"
+        }
+      }
+    }
+  },
+  "settings": {
+    "layout": {
+      "contentSize": "1000px",
+      "wideSize": "1300px"
+    },
+    "appearanceTools": true,
+    "color": {
+      "palette": [
+        {
+          "name": "Scouts Purple",
+          "slug": "scout-purple",
+          "color": "#7413dc"
+        },
+        {
+          "name": "Scouts Teal",
+          "slug": "scout-teal",
+          "color": "#088486"
+        },
+        {
+          "name": "Scouts Red",
+          "slug": "scout-red",
+          "color": "#ed3f23"
+        },
+        {
+          "name": "Scouts Pink",
+          "slug": "scout-pink",
+          "color": "#ffb4e5"
+        },
+        {
+          "name": "Scouts Green",
+          "slug": "scout-teal",
+          "color": "#25b755"
+        },
+        {
+          "name": "Scouts Navy",
+          "slug": "scout-navy",
+          "color": "#003982"
+        },
+        {
+          "name": "Scouts Blue",
+          "slug": "scout-blue",
+          "color": "#006ddf"
+        },
+        {
+          "name": "Scouts Yellow",
+          "slug": "scout-yellow",
+          "color": "#ffe627"
+        },
+        {
+          "name": "Scouts Orange",
+          "slug": "scout-orange",
+          "color": "#ff912a"
+        },
+        {
+          "name": "Scouts Forest Green",
+          "slug": "scout-forest-green",
+          "color": "#205b41"
+        }
+      ]
+    }
+  }
+}

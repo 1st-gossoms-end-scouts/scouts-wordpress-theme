@@ -7,7 +7,7 @@
   <?php b5st_mainbody_start(); ?>
 
   <header class="container py-5 text-center">
-    <span class="h3 fw-light"><?php  _e('Archive', 'b5st'); ?></span>
+    <span class="h3 fw-light"><?php  _e('Archive', 'scouts-wordpress-theme'); ?></span>
     <h1 class="display-4 mt-3">
       <?php echo the_archive_title(); ?>
     </h1>
