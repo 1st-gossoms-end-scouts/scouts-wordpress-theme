@@ -70,3 +70,21 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 ol.wp-block-latest-comments {
   padding-left: 0;
 }
+
+// Forms
+input {
+  padding: $input-padding-y $input-padding-x $input-padding-y $input-padding-x;
+  line-height: $input-line-height;
+  transition: $input-transition;
+  border-radius: $input-border-radius;
+  height: $input-height;
+}
+
+button {
+  padding: $input-btn-padding-y $input-btn-padding-x $input-btn-padding-y $input-btn-padding-x;
+  line-height: $input-btn-line-height;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  border-radius: $border-radius;
+  height: add($input-line-height * 1em, add($input-padding-y * 2, $input-height-border, false));
+  background-color: $white;
+}

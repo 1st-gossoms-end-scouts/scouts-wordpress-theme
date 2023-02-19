@@ -2,6 +2,7 @@
  * b5st since v1.0 | Unicence
  */
 
+ @import "../../bootstrap/scss/bootstrap";
  @import "b5st/_base";
  @import "b5st/_typography";
  @import "b5st/_code";
@@ -14,3 +15,6 @@
  @import "b5st/_tables";
  @import "b5st/_comments";
  @import "b5st/_footer";
+ @import "scout/_variables";
+ @import "scout/_typography";
+ @import "scout/_hero";

@@ -11,9 +11,8 @@
         <i class="bi bi-bookmark"></i> 
         <span class="text-uppercase"><?php the_category(', '); ?></span>
       </div>
-      <h1 class="display-1 text-center fw-bolder"><?php the_title()?></h1>
+      <h1 class="display-1 text-center"><?php the_title()?></h1>
       <div class="header-metas d-flex justify-content-center align-items-center my-5 text-muted">
-        
         <div class="pe-3 d-flex align-items-center">
           <?php # <i class="bi bi-person-circle"></i> ?>
           <div class="me-1 border rounded-circle overflow-hidden">
@@ -40,7 +39,7 @@
         </div>
       </div>
     </header>
-    <section class="container-xxl pb-6">
+    <section class="container pb-6">
       <?php the_post_thumbnail(); ?>
     </section>
 
@@ -85,7 +84,7 @@
     endif;
   ?>
 
-  <section class="container-xxl my-5">
+  <section class="container my-5">
     <div class="row g-2">
       <?php if (strlen(get_previous_post()->post_title) > 0) { ?>
       <div class="col-sm">
