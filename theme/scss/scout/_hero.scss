@@ -1,7 +1,17 @@
-.masthead {
-  height: 50vh;
-  min-height: 500px;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
+@media (max-width: 768px) {
+  .masthead {
+    height: 40vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 768px) {
+  .masthead {
+    height: 50vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
 }

@@ -8433,6 +8433,12 @@ button {
   height: calc(1.5em + 0.75rem + 2px);
   background-color: #fff; }
 
+.wp-block-button__link {
+  margin-bottom: 1rem; }
+
+input.components-combobox-control__input[type=text] {
+  height: auto; }
+
 header h2 a, header .h2 a {
   color: rgba(0, 0, 0, 0.9);
   text-decoration: none; }
@@ -8519,8 +8525,8 @@ header h2 a, header .h2 a {
   max-width: 720px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: .75rem;
-  padding-left: .75rem; }
+  padding-right: 1.25rem;
+  padding-left: 1.25rem; }
 
 .wrap-lg {
   width: 100%;
@@ -8693,6 +8699,9 @@ body {
 main {
   flex: 1 0 auto; }
 
+.editor-styles-wrapper {
+  font-family: "Nunito Sans", sans-serif !important; }
+
 body {
   font-family: "Nunito Sans", sans-serif; }
 
@@ -8726,7 +8735,7 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1rem; }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h1, .h2, .h3, .h4, .h5, .h6, .editor-styles-wrapper h1, .editor-styles-wrapper .h1, .editor-styles-wrapper h2, .editor-styles-wrapper .h2, .editor-styles-wrapper h3, .editor-styles-wrapper .h3, .editor-styles-wrapper h4, .editor-styles-wrapper .h4, .editor-styles-wrapper h5, .editor-styles-wrapper .h5, .editor-styles-wrapper h6, .editor-styles-wrapper .h6 {
   font-weight: 900; }
 
 header h2 a, header .h2 a {
@@ -8756,9 +8765,24 @@ header h2 a, header .h2 a {
 .text-purple {
   color: #7413dc; }
 
-.masthead {
-  height: 50vh;
-  min-height: 500px;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat; }
+@media (max-width: 768px) {
+  .masthead {
+    height: 40vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat; } }
+
+@media (min-width: 768px) {
+  .masthead {
+    height: 50vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat; } }
+
+.navbar-brand {
+  align-items: center;
+  display: flex;
+  min-height: 64px; }
+
+.navbar-collapse {
+  justify-content: right; }

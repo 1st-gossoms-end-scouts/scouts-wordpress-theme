@@ -37,9 +37,9 @@ function image_alt_by_url( $image_url ) {
 function b5st_navbar_brand()
 {
     if (!has_action('navbar_brand')) {
-        if (get_option('logo_image')) {
+        if (get_theme_mod('scout_logo_image')) {
             ?>
-            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><img style="vertical-align:middle;max-height:65px;" alt="<?php echo image_alt_by_url(get_option('logo_image'))?>" src="<?php echo get_option('logo_image')?>"></a>
+            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><img style="vertical-align:middle;max-height:65px;" alt="<?php echo image_alt_by_url(get_theme_mod('scout_logo_image'))?>" src="<?php echo get_theme_mod('scout_logo_image')?>"></a>
             <?php
         } else {
             ?>
@@ -55,7 +55,7 @@ function b5st_navbar_search()
 {
     if (!has_action('navbar_search')) {
         ?>
-        <form class="ms-1 md-flex" role="search" method="get" id="searchform"
+        <form class="ms-1 md-flex" role="search" method="get" id="searchform" style="margin-left: 0!important;"
               action="<?php echo esc_url(home_url('/')); ?>">
             <div class="input-group">
                 <input class="form-control border-secondary" type="text" value="<?php echo get_search_query(); ?>"

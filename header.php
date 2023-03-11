@@ -13,7 +13,7 @@
 
 <?php b5st_navbar_before();?>
 
-<nav id="site-navbar" class="border-bottom navbar navbar-expand-md navbar-light bg-primary">
+<nav id="site-navbar" class="navbar navbar-expand-md navbar-light bg-primary">
   <div class="container">
 
     <?php b5st_navbar_brand();?>

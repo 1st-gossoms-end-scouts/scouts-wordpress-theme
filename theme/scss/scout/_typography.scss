@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,900');
 
+.editor-styles-wrapper {
+  font-family: $scout-font-stack !important;
+}
+
 body {
-  //color: $scout-black;
   font-family: $scout-font-stack;
 }
 
@@ -29,13 +32,14 @@ h6 {
   @include font-size(1rem);
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .editor-styles-wrapper h1, .editor-styles-wrapper h2, .editor-styles-wrapper h3, .editor-styles-wrapper h4, .editor-styles-wrapper h5, .editor-styles-wrapper h6, {
   @include rfs($scout-font-black, font-weight);
 }
 
 header h2 a {
   color: $scout-black;
   text-decoration: none;
+
   &:hover {
     text-decoration: none;
     color: $scout-dark-grey;
