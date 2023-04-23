@@ -19,7 +19,6 @@ jobs:
           node-version: 14
       - name: Build theme # Remove or modify this step as needed
         run: |
-          nvm inst
           npm install
           npm run build
           npm run scss-build
