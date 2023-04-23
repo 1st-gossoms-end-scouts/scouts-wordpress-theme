@@ -19,16 +19,19 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
-      - name: Build theme # Remove or modify this step as needed
+      - name: Build theme
         run: |
           npm install
           npm run build
           npm run scss-build
+          curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+          php wp-cli.phar package install wp-cli/dist-archive-command
+          php wp-cli.phar  dist-archive . ./scout-wordpress-theme.zip --plugin-dirname=scout-wordpress-theme
+      - uses: actions/upload-artifact@v3
+        with:
+          name: scout-wordpress-theme.zip
+          path: scout-wordpress-theme.zip
 
-      - name: Generate zip
-        uses: 10up/action-wordpress-plugin-build-zip@stable
-        env:
-          SLUG: scouts-wordpress-theme
 #      - name: FTP Deploy to WP Engine (Production)
 #        uses: SamKirkland/FTP-Deploy-Action@4.0.0
 #        with:

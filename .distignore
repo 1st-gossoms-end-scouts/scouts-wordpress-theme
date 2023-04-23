@@ -6,6 +6,7 @@
 /theme/jsx
 /bootstrap
 /plugins/block-editor-colors/.gitignore
+wp-cli.phar
 
 .distignore
 .gitignore
