@@ -14,9 +14,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Build plugin # Remove or modify this step as needed
+      - name: Build theme # Remove or modify this step as needed
         run: |
-          composer install --no-dev
           npm install
           npm run build
           npm run scss-build
