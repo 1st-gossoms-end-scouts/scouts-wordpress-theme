@@ -54,4 +54,4 @@ The UK Scout Association for the design and brand guidelines
 
 ## License
 
-This software is licensed under [GNU General Public License v3.0](LICENSE.md)
+This software is licensed under [GNU General Public License v3.0](LICENSE)
