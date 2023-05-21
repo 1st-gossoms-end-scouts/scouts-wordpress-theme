@@ -1,0 +1,11 @@
+// Sticky Footer
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  --wp--style--global--content-size: $container-max-widths(xxl);
+}
+main {
+  flex: 1 0 auto;
+}

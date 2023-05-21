@@ -1,0 +1,28 @@
+#comments,
+#reply-title {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.comment-list,
+.comment-list ul {
+  padding-left: 0;
+}
+
+.comment-list li {
+  padding: 1rem;
+}
+
+.comment-meta {
+  margin-bottom: 1rem;
+}
+
+.comment-list,
+.comment-list .children {
+  list-style-type: none;
+}
+.comment {
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+}

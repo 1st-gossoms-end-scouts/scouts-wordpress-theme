@@ -1,0 +1,111 @@
+// .author-bio,
+// .comments-wrap {
+//   margin: 48px auto;
+//   max-width: 720px;
+//   padding-left: 16px;
+//   padding-right: 16px;
+// }
+
+.site-header-image {
+  display: block;
+  margin: auto;
+}
+
+// .wp-caption {}
+// .wp-caption-text {}
+// .sticky {}
+// .screen-reader-text {}
+// .gallery-caption {}
+
+// .bypostauthor {}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+}
+
+// Author bio
+
+// .author-bio .avatar {
+//   border: 1px solid #dee2e6;
+//   border-radius: 50%;
+// }
+
+// Main content
+// Can go here
+
+// Sidebar
+// Can go here
+
+// Cover
+
+.wp-block-cover-text p {
+  padding: 1.5em 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .wp-block-cover-text p {
+    padding: 1.5em 0;
+  }
+}
+
+// Latest Posts
+
+ul.wp-block-latest-posts.alignwide,
+ul.wp-block-latest-posts.alignfull,
+ul.wp-block-latest-posts.is-grid.alignwide,
+ul.wp-block-latest-posts.is-grid.alignwide {
+  padding: 0 16px;
+}
+
+// Latest Comments
+ol.wp-block-latest-comments {
+  padding-left: 0;
+}
+
+// Forms
+//.input-group {
+//  //margin-bottom: $form-label-margin-bottom;
+//  //margin-top: $form-text-margin-top;
+//  padding: $input-padding-y $input-padding-x $input-padding-y $input-padding-x;
+//}
+
+input {
+  padding: $input-padding-y $input-padding-x $input-padding-y $input-padding-x;
+  line-height: $input-line-height;
+  transition: $input-transition;
+  border-radius: $input-border-radius;
+  height: $input-height;
+}
+
+.editor-styles-wrapper .wp-element-button, .wp-element-button, button {
+  @extend .btn;
+}
+
+
+input.components-combobox-control__input[type=text] {
+  //for gutenburg
+  height: auto;
+}
+
+.wp-block-search__inside-wrapper {
+  margin-bottom: 1em;
+}
+
+.wp-block-group .is-vertical, .wp-block-buttons{
+  margin-top: $block-margin-top;
+  margin-bottom: $block-margin-bottom;
+}
+
+.navbar-nav {
+  padding-right: 10px;
+  padding-left: 10px;
+}

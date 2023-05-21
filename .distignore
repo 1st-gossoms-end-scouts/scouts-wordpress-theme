@@ -1,0 +1,17 @@
+/.git
+/.github
+/node_modules
+/webpack.config.js
+/theme/scss
+/theme/jsx
+/bootstrap
+/plugins/block-editor-colors/.gitignore
+*/.idea
+wp-cli.phar
+*.DS_STORE
+.babelrc
+
+
+.distignore
+.gitignore
+.gitmodules

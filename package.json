@@ -1,0 +1,34 @@
+{
+  "name": "b5st",
+  "version": "1.3.2",
+  "description": "WordPress starter theme with Bootstrap 5",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --watch theme/scss -o theme/css",
+    "scss-build": "node-sass theme/scss -o theme/css",
+    "wp-env": "wp-env",
+    "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
+    "dev": "cross-env BABEL_ENV=default webpack --watch"
+  },
+  "watch": {
+    "build": "js-src"
+  },
+  "author": "Simon Padbury, Harvey Allsop",
+  "license": "Unlicence",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "cross-env": "^5.0.1",
+    "webpack": "^3.1.0"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.20.13"
+  }
+}

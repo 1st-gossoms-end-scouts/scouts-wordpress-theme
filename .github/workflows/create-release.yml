@@ -1,0 +1,36 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Use Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Build theme
+        run: |
+          npm install
+          npm run build
+          npm run scss-build
+          curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+          php wp-cli.phar package install wp-cli/dist-archive-command
+          php wp-cli.phar  dist-archive . ./scout-wordpress-theme.zip --plugin-dirname=scout-wordpress-theme
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: scout-wordpress-theme.zip
+          generate_release_notes: true
+          draft: true
+
