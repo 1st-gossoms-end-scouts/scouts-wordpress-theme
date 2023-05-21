@@ -3,7 +3,8 @@
 Scouts Wordpress Theme is designed for UK scout groups to easily design a wordpress site that follows the UK Scout Association Brand guidelines
 
 It is a simple, Gutenberg-compatible theme loaded with Bootstrap 5 — using node-sass for preprocessing its SCSS into CSS.
-It is based on the [b5st](https://github.com/SimonPadbury/b5st) theme
+It is based on the [b5st](https://github.com/SimonPadbury/b5st) theme.
+
 A demo of the site is available at [wordpress-theme.1stgossomsendscouts.org.uk](https://wordpress-theme.1stgossomsendscouts.org.uk)
 
 ## Contributing
