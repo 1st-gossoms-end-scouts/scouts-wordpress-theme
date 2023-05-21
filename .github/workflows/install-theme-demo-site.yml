@@ -18,7 +18,7 @@ jobs:
       run: echo "::set-output name=version::${GITHUB_REF##*/}"
     - name: Install theme on demo server
       uses: appleboy/ssh-action@v0.1.10
-      with:git
+      with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
