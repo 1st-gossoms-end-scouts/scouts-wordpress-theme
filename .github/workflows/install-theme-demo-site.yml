@@ -18,12 +18,11 @@ jobs:
       run: echo "::set-output name=version::${GITHUB_REF##*/}"
     - name: Install theme on demo server
       uses: appleboy/ssh-action@v0.1.10
-      with:
+      with:git
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
-#        fingerprint: ${{ secrets.SSH_FINGERPRINT }} not working
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd ${{ secrets.SERVER_WP_PATH }}

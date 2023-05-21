@@ -150,6 +150,13 @@ function b5st_footer_after()
 function b5st_bottomline()
 {
     if (!has_action('bottomline')) {
+        $site_info_text = get_theme_mod('scout_site_info_link_text', 'Powered by Scout Wordpress Theme');
+        $site_info_id = get_theme_mod('scout_site_info_link', '');
+        if ($site_info_id == '') {
+            $site_info_url = 'https://wordpress-theme.1stgossomsendscouts.org.uk';
+        } else {
+            $site_info_url = get_page_link($site_info_id);
+        }
         ?>
         <div class="container">
             <div class="row pt-3">
@@ -158,7 +165,7 @@ function b5st_bottomline()
                                 href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></p>
                 </div>
                 <div class="col-sm">
-                    <p class="text-center text-sm-end text-secondary"><a href="">Site Info</a></p>
+                    <p class="text-center text-sm-end text-secondary"><a href="<?php echo $site_info_url ?>"><?php echo $site_info_text ?></a></p>
                 </div>
             </div>
         </div>

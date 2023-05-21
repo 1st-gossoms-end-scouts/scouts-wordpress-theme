@@ -43,7 +43,7 @@ function scout_customize_register($wp_customize)
         'label' => __('Site Logo', 'scouts-wordpress-theme'),
         'section' => 'title_tagline',
         'settings' => 'scout_logo_image',
-        'description' => '<p>This is the logo used in the navbar.</p><p>If no image is present the site name is displayed.</p><p>We recommend using the logo generator at <a href="https://scoutsbrand.org.uk" target="_blank">scoutsbrand.org.uk</a>, with the linear option.</p',
+        'description' => '<p>This is the logo used in the navbar.</p><p>If no image is present the site name is displayed.</p><p>We recommend using the logo generator at <a href="https://scoutsbrand.org.uk" target="_blank">scoutsbrand.org.uk</a>, with the linear option.</p>',
         'priority' => 10,
     )));
     $wp_customize->remove_section( 'static_front_page' );
@@ -63,6 +63,34 @@ function scout_customize_register($wp_customize)
         'priority' => 1,
         'default' => "2"
     )));
+
+    $wp_customize->add_section('scout_footer_options', array(
+        'title' => __('Footer Options', 'scouts-wordpress-theme'),
+        'description' => 'Settings for site footer',
+        'priority' => 200,
+    ));
+    $wp_customize->add_setting('scout_site_info_link_text', array(
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'esc_attr',
+    ));
+    $wp_customize->add_control('site_info_link_text', array(
+        'settings' => 'scout_site_info_link_text',
+        'label' => 'Customise Site Info text:',
+        'description' => '<p>This is the text displayed in the bottom right of the footer. Defaults to "Site Info"</p>',
+        'section' => 'scout_footer_options',
+        'type' => 'text',
+    ));
+    $wp_customize->add_setting('scout_site_info_link', array(
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'esc_attr',
+    ));
+    $wp_customize->add_control('site_info_link', array(
+        'settings' => 'scout_site_info_link',
+        'label' => 'Select Site Info page:',
+        'description' => '<p>This is the page the above link will point to.</p>',
+        'section' => 'scout_footer_options',
+        'type' => 'dropdown-pages',
+    ));
 
 }
 
@@ -148,6 +176,17 @@ function customize_css() {
         .bg-primary {
             background-color: <?= $pallete[0] ?> !important;
         }
+        .btn-primary{
+            --bs-btn-color:  <?= $pallete[3] ?> !important;
+            --bs-btn-bg:  <?= $pallete[0] ?> !important;
+            --bs-btn-border-color:  <?= $pallete[5] ?> !important;
+            --bs-btn-hover-color:  <?= $pallete[4] ?> !important;
+            --bs-btn-hover-bg:  <?= $pallete[1] ?> !important;
+            --bs-btn-hover-border-color:  <?= $pallete[1] ?> !important;
+            --bs-btn-active-color:  <?= $pallete[4] ?> !important;
+            --bs-btn-active-bg: <?= $pallete[1] ?> !important;
+            --bs-btn-active-border-color:  <?= $pallete[1] ?> !important;
+        }
 
         /* SECONDARY COLOUR OVERWRITES */
         .bg-secondary {
@@ -155,6 +194,17 @@ function customize_css() {
         }
         .dropdown-menu {
             --bs-dropdown-link-active-bg: <?= $pallete[1] ?>;
+        }
+        .btn-secondary{
+            --bs-btn-color:  <?= $pallete[4] ?> !important;
+            --bs-btn-bg:  <?= $pallete[1] ?> !important;
+            --bs-btn-border-color:  <?= $pallete[1] ?> !important;
+            --bs-btn-hover-color: #00000;
+            --bs-btn-hover-bg:  #FFFFF;
+            --bs-btn-hover-border-color:  <?= $pallete[1] ?> !important;
+            --bs-btn-active-color:  #FFFFF;
+            --bs-btn-active-bg: #00000;
+            --bs-btn-active-border-color:  <?= $pallete[1] ?> !important;
         }
 
         /* TEXT COLOUR OVERWRITES */
