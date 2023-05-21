@@ -11,8 +11,6 @@ if ( ! function_exists('b5st_enqueues') ) {
 		wp_register_style('bootstrapIcons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css', false, '1.9.1', null);
 		wp_enqueue_style('bootstrapIcons');
 
-		wp_enqueue_style( 'gutenberg-blocks', get_template_directory_uri() . '/theme/css/blocks.css' );
-
 		wp_register_style('theme', get_template_directory_uri() . '/theme/css/b5st.css', false, null);
 		wp_enqueue_style('theme');
 
