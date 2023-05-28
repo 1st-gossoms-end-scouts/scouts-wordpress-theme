@@ -9,6 +9,8 @@ if (has_post_thumbnail()) {
 $logo_image = get_post(get_the_ID()) -> logo_image;
 if ($logo_image) {
     $logo_image_url = wp_get_attachment_image_src($logo_image, 'full')[0];
+}else{
+    $logo_image_url = false;
 }
 ?>
 
