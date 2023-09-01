@@ -7,7 +7,6 @@
    * Copyright 2011-2022 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,900");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -8779,9 +8778,6 @@ main {
   margin-bottom: 1rem;
   background-color: #7413dc; }
 
-.editor-styles-wrapper {
-  font-family: "Nunito Sans", sans-serif !important; }
-
 body {
   font-family: "Nunito Sans", sans-serif; }
 
@@ -8866,3 +8862,8 @@ header h2 a, header .h2 a {
 
 .navbar-collapse {
   justify-content: right; }
+
+.editor-styles-wrapper {
+  font-family: "Nunito Sans", sans-serif !important;
+  padding-left: 2em !important;
+  padding-right: 2em !important; }
