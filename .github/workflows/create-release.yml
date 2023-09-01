@@ -16,8 +16,11 @@ jobs:
           submodules: recursive
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Use Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
       - name: Set version number
-        id: version
         run: |
           old_str="\"version\": \"dev\""
           new_str="\"version\": \"$RELEASE_VERSION\""
@@ -27,16 +30,12 @@ jobs:
           sed -i "s/$old_str/$new_str/g" style.css
           git config user.email "github@1stgossomsendscouts.org.uk"
           git config user.name "Github Actions"
-          git add package.json style.css
+          npm install
+          git add package.json style.css package-lock.json
           git commit -m "Update version numbers to $RELEASE_VERSION"
           git tag -f ${GITHUB_REF#refs/*/}
           git push -f --tags
-      - name: Use Node.js 14
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
       - name: Build theme
-        if: steps.version.outcome == 'success'
         run: |
           npm install
           npm run build
