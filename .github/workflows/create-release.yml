@@ -19,7 +19,7 @@ jobs:
       - name: Set version number
         run: |
           old_str="\"version\": \"dev\"
-          new_str="\"version\": \"$RELEASE_VERSION\"
+          new_str="\"version\": \"$RELEASE_VERSION\""
           sed -i 's/$old_str/$new_str/g' package.json
           old_str="Version: dev"
           new_str="Version: $RELEASE_VERSION"
