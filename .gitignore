@@ -105,3 +105,10 @@ dist
 
 npm-debug.log
 .DS_Store
+
+# Built CSS and JS
+theme/js
+theme/css
+
+# Local bootstrap
+bootstrap
