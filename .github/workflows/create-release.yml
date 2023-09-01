@@ -20,10 +20,10 @@ jobs:
         run: |
           old_str="\"version\": \"dev\""
           new_str="\"version\": \"$RELEASE_VERSION\""
-          sed -i 's/$old_str/$new_str/g' package.json
+          sed -i "s/$old_str/$new_str/g" package.json
           old_str="Version: dev"
           new_str="Version: $RELEASE_VERSION"
-          sed -i 's/$old_str/$new_str/g' style.css
+          sed -i "s/$old_str/$new_str/g" style.css
           git config user.email "github@1stgossomsendscouts.org.uk"
           git config user.name "Github Actions"
           git add package.json style.css
