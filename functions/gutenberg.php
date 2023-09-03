@@ -14,6 +14,7 @@ function myguten_register_meta()
         'single' => true,
         'type' => 'integer',
     ));
+    register_block_type_from_metadata(get_template_directory() . '/theme/blocks/src/scout-footer-widget/block.json');
 }
 
 add_action('init', 'myguten_register_meta');

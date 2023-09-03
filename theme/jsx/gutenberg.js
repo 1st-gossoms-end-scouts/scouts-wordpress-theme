@@ -2,8 +2,7 @@
 const el = wp.element.createElement;
 const withSelect = wp.data.withSelect;
 const withDispatch = wp.data.withDispatch;
-const SelectControl = wp.components.SelectControl;
-const { Button, Spinner, BaseControl } = wp.components;
+const { Button, Spinner, BaseControl, SelectControl } = wp.components;
 const { MediaUpload, MediaUploadCheck } = wp.blockEditor;
 const { useSelect, useDispatch } = wp.data;
 
@@ -43,7 +42,7 @@ class SelectControlCustom extends React.Component {
 
         return (
             el(
-                wp.components.SelectControl,
+                SelectControl,
                 {
                     heading: "Manage Featured Image",
                     label: "Set Position",

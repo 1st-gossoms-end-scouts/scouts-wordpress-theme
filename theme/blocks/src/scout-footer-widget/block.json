@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "scouts-wordpress-theme/scout-footer-widget",
+	"version": "0.1.0",
+	"title": "Scouts Footer Widget",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Footer widget for Scouts website",
+	"example": {},
+	"attributes": {
+		"leftContent": {
+			"type": "string",
+			"default": "<strong>Useful Links</strong>"
+		},
+		"rightContent": {
+			"type": "string",
+			"default": "<strong>Contact Us</strong>"
+		}
+	},
+	"textdomain": "scouts-wordpress-theme",
+	"editorScript": "file:../../build/index.js",
+	"render": "file:./render.php"
+}

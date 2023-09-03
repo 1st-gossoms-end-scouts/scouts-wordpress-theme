@@ -109,6 +109,7 @@ npm-debug.log
 # Built CSS and JS
 theme/js
 theme/css
+theme/blocks/build
 
 # Local bootstrap
 bootstrap
