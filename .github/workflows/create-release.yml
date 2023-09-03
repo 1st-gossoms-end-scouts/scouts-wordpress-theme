@@ -22,10 +22,10 @@ jobs:
           node-version: 14
       - name: Set version number
         run: |
-          old_str="\"version\": \"dev\""
+          old_str="\"version\": \"0.0.0\""
           new_str="\"version\": \"$RELEASE_VERSION\""
           sed -i "s/$old_str/$new_str/g" package.json
-          old_str="Version: dev"
+          old_str="Version: 0.0.0"
           new_str="Version: ${RELEASE_VERSION:1}"
           sed -i "s/$old_str/$new_str/g" style.css
           git config user.email "github@1stgossomsendscouts.org.uk"
@@ -39,6 +39,7 @@ jobs:
         run: |
           npm install
           npm run build
+          npm run build-blocks
           npm run scss-build
           curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
           php wp-cli.phar package install wp-cli/dist-archive-command

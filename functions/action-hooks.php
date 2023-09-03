@@ -162,10 +162,10 @@ function b5st_bottomline()
             <div class="row pt-3">
                 <div class="col-sm">
                     <p class="text-center text-sm-start text-secondary">&copy; <?php echo date('Y'); ?> <a
-                                href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></p>
+                                class="footer-link footer-text" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></p>
                 </div>
                 <div class="col-sm">
-                    <p class="text-center text-sm-end text-secondary"><a href="<?php echo $site_info_url ?>"><?php echo $site_info_text ?></a></p>
+                    <p class="text-center text-sm-end text-secondary"><a class="footer-link footer-text" href="<?php echo $site_info_url ?>"><?php echo $site_info_text ?></a></p>
                 </div>
             </div>
         </div>

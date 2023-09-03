@@ -157,90 +157,93 @@ function get_scout_color_palette($color_str) {
 
 function customize_css() {
     $color_str = get_option( 'color_scheme_select', 'scout-white' );
-    $pallete = get_scout_color_palette($color_str);
+    $GLOBALS['pallete'] = get_scout_color_palette($color_str);
     $custom_color_service = CustomColorsService::getInstance();
     $custom_color_service -> delete_all_colors();
-    $custom_color_service -> add_color_prog("Primary", "scout-primary", $pallete[0]);
-    $custom_color_service -> add_color_prog("Secondary", "scout-secondary", $pallete[1]);
-    $custom_color_service -> add_color_prog("Tertiary", "scout-tertiary", $pallete[2]);
-    $custom_color_service -> add_color_prog("Text Primary", "scout-text-primary", $pallete[3]);
-    $custom_color_service -> add_color_prog("Text Secondary", "scout-text-secondary", $pallete[4]);
+    $custom_color_service -> add_color_prog("Primary", "scout-primary", $GLOBALS['pallete'][0]);
+    $custom_color_service -> add_color_prog("Secondary", "scout-secondary", $GLOBALS['pallete'][1]);
+    $custom_color_service -> add_color_prog("Tertiary", "scout-tertiary", $GLOBALS['pallete'][2]);
+    $custom_color_service -> add_color_prog("Text Primary", "scout-text-primary", $GLOBALS['pallete'][3]);
+    $custom_color_service -> add_color_prog("Text Secondary", "scout-text-secondary", $GLOBALS['pallete'][4]);
 
     ?>
     <style>
         /* PRIMARY COLOUR OVERWRITES */
 
         button {
-            background-color: <?= $pallete[0] ?> !important;
+            background-color: <?= $GLOBALS['pallete'][0] ?> !important;
         }
         .bg-primary {
-            background-color: <?= $pallete[0] ?> !important;
+            background-color: <?= $GLOBALS['pallete'][0] ?> !important;
         }
         .btn-primary{
-            --bs-btn-color:  <?= $pallete[3] ?> !important;
-            --bs-btn-bg:  <?= $pallete[0] ?> !important;
-            --bs-btn-border-color:  <?= $pallete[5] ?> !important;
-            --bs-btn-hover-color:  <?= $pallete[4] ?> !important;
-            --bs-btn-hover-bg:  <?= $pallete[1] ?> !important;
-            --bs-btn-hover-border-color:  <?= $pallete[1] ?> !important;
-            --bs-btn-active-color:  <?= $pallete[4] ?> !important;
-            --bs-btn-active-bg: <?= $pallete[1] ?> !important;
-            --bs-btn-active-border-color:  <?= $pallete[1] ?> !important;
+            --bs-btn-color:  <?= $GLOBALS['pallete'][3] ?> !important;
+            --bs-btn-bg:  <?= $GLOBALS['pallete'][0] ?> !important;
+            --bs-btn-border-color:  <?= $GLOBALS['pallete'][5] ?> !important;
+            --bs-btn-hover-color:  <?= $GLOBALS['pallete'][4] ?> !important;
+            --bs-btn-hover-bg:  <?= $GLOBALS['pallete'][1] ?> !important;
+            --bs-btn-hover-border-color:  <?= $GLOBALS['pallete'][1] ?> !important;
+            --bs-btn-active-color:  <?= $GLOBALS['pallete'][4] ?> !important;
+            --bs-btn-active-bg: <?= $GLOBALS['pallete'][1] ?> !important;
+            --bs-btn-active-border-color:  <?= $GLOBALS['pallete'][1] ?> !important;
         }
 
         /* SECONDARY COLOUR OVERWRITES */
         .bg-secondary {
-            background-color: <?= $pallete[1] ?> !important;
+            background-color: <?= $GLOBALS['pallete'][1] ?> !important;
         }
         .dropdown-menu {
-            --bs-dropdown-link-active-bg: <?= $pallete[1] ?>;
+            --bs-dropdown-link-active-bg: <?= $GLOBALS['pallete'][1] ?>;
         }
         .btn-secondary{
-            --bs-btn-color:  <?= $pallete[4] ?> !important;
-            --bs-btn-bg:  <?= $pallete[1] ?> !important;
-            --bs-btn-border-color:  <?= $pallete[1] ?> !important;
+            --bs-btn-color:  <?= $GLOBALS['pallete'][4] ?> !important;
+            --bs-btn-bg:  <?= $GLOBALS['pallete'][1] ?> !important;
+            --bs-btn-border-color:  <?= $GLOBALS['pallete'][1] ?> !important;
             --bs-btn-hover-color: #00000;
             --bs-btn-hover-bg:  #FFFFF;
-            --bs-btn-hover-border-color:  <?= $pallete[1] ?> !important;
+            --bs-btn-hover-border-color:  <?= $GLOBALS['pallete'][1] ?> !important;
             --bs-btn-active-color:  #FFFFF;
             --bs-btn-active-bg: #00000;
-            --bs-btn-active-border-color:  <?= $pallete[1] ?> !important;
+            --bs-btn-active-border-color:  <?= $GLOBALS['pallete'][1] ?> !important;
         }
 
         /* TEXT COLOUR OVERWRITES */
         /* Primary */
         .navbar{
-            --bs-navbar-color: <?= $pallete[3] ?>!important;
-            --bs-navbar-brand-color: <?= $pallete[3] ?>!important;
+            --bs-navbar-color: <?= $GLOBALS['pallete'][3] ?>!important;
+            --bs-navbar-brand-color: <?= $GLOBALS['pallete'][3] ?>!important;
         }
         .text-primary {
-            color:  <?= $pallete[3] ?> !important;
+            color:  <?= $GLOBALS['pallete'][3] ?> !important;
         }
 
         /* Secondary */
         :root{
-            --bs-primary-rgb: <?= $pallete[4] ?> !important;
+            --bs-primary-rgb: <?= $GLOBALS['pallete'][4] ?> !important;
         }
         .wp-element-button{
-            --bs-btn-color: <?= $pallete[4] ?>;
+            --bs-btn-color: <?= $GLOBALS['pallete'][4] ?>;
         }
         .bi-search {
-            color:<?= $pallete[4] ?> !important;
+            color:<?= $GLOBALS['pallete'][4] ?> !important;
         }
         #footer {
-            color: <?= $pallete[4] ?>!important;
-            --bs-link-color: <?= $pallete[4] ?>!important;
+            color: <?= $GLOBALS['pallete'][4] ?>!important;
+            --bs-link-color: <?= $GLOBALS['pallete'][4] ?>!important;
+        }
+        .footer-text, .footer-text a {
+            color: <?= $GLOBALS['pallete'][4] ?>!important;
         }
         .text-secondary {
-            color:  <?= $pallete[4] ?> !important;
-            --bs-link-color: <?= $pallete[4] ?>!important;
+            color:  <?= $GLOBALS['pallete'][4] ?> !important;
+            --bs-link-color: <?= $GLOBALS['pallete'][4] ?>!important;
         }
         .dropdown-menu {
-            --bs-dropdown-link-active-color: <?= $pallete[4] ?>;
+            --bs-dropdown-link-active-color: <?= $GLOBALS['pallete'][4] ?>;
         }
         /* OTHER */
         .hero-title {
-            color:  <?= $pallete[5] ?> !important;
+            color:  <?= $GLOBALS['pallete'][5] ?> !important;
         }
     </style>
     <?php
