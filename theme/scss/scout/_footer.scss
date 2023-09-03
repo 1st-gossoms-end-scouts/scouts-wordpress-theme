@@ -11,10 +11,6 @@
   justify-content: center;
 }
 
-.widget_scout_vertical_line {
-  border-left: thick solid $scout-white;
-}
-
 .widget_scout_footer_text_left {
   font-size: $font-size-sm;
   text-align: right;
@@ -30,16 +26,13 @@
 }
 
 .footer-link {
-  color: $scout-white;
   text-decoration: none;
 }
 
 .widget_scout_footer_text_left a {
-  color: $scout-white;
   text-decoration: none;
 }
 
 .widget_scout_footer_text_right a {
-  color: $scout-white;
   text-decoration: none;
 }

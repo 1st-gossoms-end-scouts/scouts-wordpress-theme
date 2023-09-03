@@ -15,7 +15,7 @@
 		},
 		"rightContent": {
 			"type": "string",
-			"default": "<strong>Contact Us</strong><br>Address Line 1<br>Address Line 2<br><br><a href\"mailto:example@example.com\">example@example.com</a>"
+			"default": "<strong>Contact Us</strong><br>Address Line 1<br>Address Line 2<br><br><a href=\"mailto:example@example.com\">example@example.com</a>"
 		}
 	},
 	"textdomain": "scouts-wordpress-theme",
