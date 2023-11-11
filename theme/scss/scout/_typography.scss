@@ -8,6 +8,9 @@ h1, h1.display-1, h1.display-2 {
 
 h2 {
   @include font-size(2rem);
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(0,0,0,.1);
+  padding-bottom: 1rem;
 }
 
 h3 {
@@ -28,6 +31,7 @@ h6 {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .editor-styles-wrapper h1, .editor-styles-wrapper h2, .editor-styles-wrapper h3, .editor-styles-wrapper h4, .editor-styles-wrapper h5, .editor-styles-wrapper h6, {
   @include rfs($scout-font-black, font-weight);
+  margin-bottom: 1rem;
 }
 
 header h2 a {
@@ -68,4 +72,8 @@ header h2 a {
 
 .text-purple {
   color: $scout-purple;
+}
+
+ul.entry-content {
+  margin: 0;
 }
