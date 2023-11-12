@@ -1,6 +1,6 @@
 {
   "name": "scouts-wordpress-theme",
-  "version": "0.0.0",
+  "version": "v0.0.6",
   "description": "A Wordpress template for scout organisations, compliant with the UK Scout Association brand guidelines. Gutenberg compatible. Using Bootstrap 5.x, Bootstrap Icons.x, and node-sass.",
   "main": "index.js",
   "scripts": {
