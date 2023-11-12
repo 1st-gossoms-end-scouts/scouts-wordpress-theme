@@ -195,7 +195,7 @@ function customize_css() {
         .dropdown-menu {
             --bs-dropdown-link-active-bg: <?= $GLOBALS['pallete'][1] ?>;
         }
-        .btn-secondary{
+        .btn-secondary, .wp-element-button{
             --bs-btn-color:  <?= $GLOBALS['pallete'][4] ?> !important;
             --bs-btn-bg:  <?= $GLOBALS['pallete'][1] ?> !important;
             --bs-btn-border-color:  <?= $GLOBALS['pallete'][1] ?> !important;
