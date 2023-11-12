@@ -5,7 +5,6 @@
 	"version": "0.1.0",
 	"title": "Scouts Footer Widget",
 	"category": "widgets",
-	"icon": "smiley",
 	"description": "Footer widget for Scouts website",
 	"example": {},
 	"attributes": {
