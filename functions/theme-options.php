@@ -114,7 +114,7 @@ function get_scout_color_palette($color_str) {
         case "scout-purple":
             $primary = "#7413dc"; //purple
             $secondary = "#088486"; //teal
-            $tertiary = "#088486"; //teal
+            $tertiary = "#FFFFFF"; //white
             $text_primary = "#FFFFFF"; //white
             $text_secondary = "#FFFFFF"; //white
             $hero_text = "#7413dc"; //purple
@@ -122,7 +122,7 @@ function get_scout_color_palette($color_str) {
         case "scout-red":
             $primary = "#ed3f23"; //red
             $secondary = "#ffb4e5"; //pink
-            $tertiary = "#ffb4e5"; //pink
+            $tertiary = "#088486"; //teal
             $text_primary = "#FFFFFF"; //white
             $text_secondary = "#000000"; //black
             $hero_text = "#ed3f23"; //red
@@ -130,7 +130,7 @@ function get_scout_color_palette($color_str) {
         case "scout-green":
             $primary = "#25b755"; //green
             $secondary = "#003982"; //navy
-            $tertiary = "#003982"; //navy
+            $tertiary = "#FFFFFF"; //white
             $text_primary = "#000000"; //white
             $text_secondary = "#FFFFFF"; //white
             $hero_text = "#25b755"; //green
@@ -138,7 +138,7 @@ function get_scout_color_palette($color_str) {
         case "scout-blue":
             $primary = "#006ddf"; //blue
             $secondary = "#ffe627"; //yellow
-            $tertiary = "#ffe627"; //yellow
+            $tertiary = "#088486"; //teal
             $text_primary = "#FFFFFF"; //white
             $text_secondary = "#000000"; //black
             $hero_text = "#006ddf"; //blue
@@ -146,7 +146,7 @@ function get_scout_color_palette($color_str) {
         case "scout-orange":
             $primary = "#ff912a"; //orange
             $secondary = "#205b41"; //forest green
-            $tertiary = "#205b41"; //forest green
+            $tertiary = "#FFFFFF"; //white
             $text_primary = "#FFFFFF"; //white
             $text_secondary = "#FFFFFF"; //white
             $hero_text = "#ff912a"; //orange
