@@ -38,7 +38,7 @@ if ( ! function_exists('b5st_remove_generator') ) {
     return '';
   }
 }
-add_filter( 'the_generator', 'no_generator' );
+add_filter( 'the_generator', 'b5st_remove_generator' );
 
 // Remove Query Strings From Static Resources
 
