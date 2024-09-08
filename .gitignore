@@ -113,3 +113,9 @@ theme/blocks/build
 
 # Local bootstrap
 bootstrap
+
+# Built zips
+*.zip
+
+# WP CLI
+wp-cli.phar
