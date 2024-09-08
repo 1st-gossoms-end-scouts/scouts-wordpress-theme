@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "A Wordpress template for scout organisations, compliant with the UK Scout Association brand guidelines. Gutenberg compatible. Using Bootstrap 5.x, Bootstrap Icons.x, and node-sass.",
   "scripts": {
-    "scss": "sass --watch theme/scss theme/css",
-    "scss-build": "sass theme/scss theme/css",
+    "scss": "sass --watch theme/scss:theme/css",
+    "scss-build": "sass theme/scss:theme/css",
     "wp-env": "wp-env",
     "build": "wp-scripts build theme/jsx/*.js --output-path theme/js/",
     "dev": "wp-scripts start theme/jsx/*.js --output-path theme/js/",
