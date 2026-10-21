@@ -1,0 +1,46 @@
+name: Build branch artifact
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Branch, tag, or SHA to build
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and package theme
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+          submodules: recursive
+          persist-credentials: false
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build theme
+        run: |
+          npm install
+          npm run build
+          npm run build-blocks
+          npm run scss-build
+      - name: Package theme
+        run: |
+          curl -fLO https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+          php wp-cli.phar package install wp-cli/dist-archive-command
+          php wp-cli.phar dist-archive . ./scout-wordpress-theme.zip --plugin-dirname=scout-wordpress-theme
+      - name: Upload theme artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: scout-wordpress-theme
+          path: scout-wordpress-theme.zip
+          if-no-files-found: error
+          retention-days: 7
