@@ -3,6 +3,13 @@
  * Setup
  */
 
+if ( ! function_exists( 'b5st_load_textdomain' ) ) {
+	function b5st_load_textdomain() {
+		load_theme_textdomain( 'scouts-wordpress-theme', get_template_directory() . '/languages' );
+	}
+}
+add_action( 'after_setup_theme', 'b5st_load_textdomain' );
+
 if ( ! function_exists('b5st_setup') ) {
 	function b5st_setup() {
 

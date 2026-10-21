@@ -59,4 +59,9 @@ class b5st_walker_nav_menu extends Walker_Nav_menu {
  * Register Navbar
  */
 
-register_nav_menu('navbar', __('Navbar', 'scouts-wordpress-theme'));
+if ( ! function_exists( 'b5st_register_navbar' ) ) {
+	function b5st_register_navbar() {
+		register_nav_menu('navbar', __('Navbar', 'scouts-wordpress-theme'));
+	}
+}
+add_action('init', 'b5st_register_navbar');

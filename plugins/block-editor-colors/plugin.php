@@ -6,7 +6,7 @@
  * Version: 1.2.4
  * Author: MotoPress
  * Author URI: https://motopress.com
- * Text Domain: scout
+ * Text Domain: scouts-wordpress-theme
  * Domain Path: /languages/
  */
 
