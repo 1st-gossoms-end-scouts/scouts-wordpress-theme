@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - name: Use Node.js 22
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 22
       - name: Set version number
@@ -42,7 +42,7 @@ jobs:
           npm run build-blocks
           npm run scss-build
           curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-          php wp-cli.phar package install wp-cli/dist-archive-command
+          php wp-cli.phar package install wp-cli/dist-archive-command:^2.0
           mkdir -p ../pkg/scout-wordpress-theme
           rsync -a --exclude node_modules --exclude .git ./ ../pkg/scout-wordpress-theme/
           php wp-cli.phar dist-archive ../pkg/scout-wordpress-theme "$PWD/scout-wordpress-theme.zip"
