@@ -36,7 +36,9 @@ jobs:
         run: |
           curl -fLO https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
           php wp-cli.phar package install wp-cli/dist-archive-command:^2.0
-          php wp-cli.phar dist-archive . ./scout-wordpress-theme.zip --plugin-dirname=scout-wordpress-theme
+          mkdir -p ../pkg/scout-wordpress-theme
+          rsync -a --exclude node_modules --exclude .git ./ ../pkg/scout-wordpress-theme/
+          php wp-cli.phar dist-archive ../pkg/scout-wordpress-theme "$PWD/scout-wordpress-theme.zip"
       - name: Upload theme artifact
         uses: actions/upload-artifact@v4
         with:
